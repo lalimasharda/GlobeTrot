@@ -1,0 +1,243 @@
+<html>
+<style>
+.container { 
+  background: url(mountains.jpg) no-repeat center fixed; 
+opacity: 1;
+  background-size: cover;
+  position:relative;
+clear:both;
+}
+#div2{
+			border : 1px solid white;
+			margin :100px 600px 100px 600px;
+			border-radius : 3px;
+			padding:20px;width:500px;
+			align:center;
+
+}
+input[type=submit]{
+    			width: 50%;
+    			padding: 14px 20px;
+    			margin: 8px 10px;
+    			cursor: pointer;
+    			color: black;
+			border-radius : 5px;
+			align:center;
+}
+.text4
+{
+border-radius: 10px;
+transition: 200ms all ease;
+
+padding: 5px 5px;
+
+}
+.text4:hover
+{
+margin:-5px 0 0 -5px;
+height:29px;
+width:250px;
+border-radius: 10px;
+}
+#img1{
+float:left;
+}
+
+h1{
+text-align:center;
+color:#782525;
+font-family:"Constantine";
+font-size: 50px;
+font-variant: small-caps;
+}
+h4{
+text-align:center;
+font-size:30;
+font-style:oblique;
+color:#782525;
+font-family:"Constantine";
+}
+
+
+#ul1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    clear:both;  
+}
+
+#li1 {
+    float: left;
+}
+
+a{
+font-family: Constantine;
+}
+
+#li1 a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 60px;
+    text-decoration: none;
+    font-family: "Constantine";
+    font-variant: small-caps; 
+    font-size: 30px;
+}
+
+#li1 a:hover:not(.active) {
+    background-color: #DAA520;
+}
+
+.active {
+    background-color: #DAA520;
+}
+
+input[type=text] {
+       box-sizing: border-box;
+       border: 2px solid #ccc;
+       font-size: 16px;
+       background-color: white;
+ }
+
+h3{
+text-align: center;
+color:white;
+font-variant: small-caps;
+font-size:40px;
+
+
+}
+
+#img3{
+float: right;
+clear:both;
+}
+
+#pre1{
+font-family:"Constantine";
+font-size:20px;
+
+}
+#p2{
+font-family:"Constantine";
+font-size:20px;
+text-align: right;
+}
+
+
+#img4{
+float:left;
+clear:both;
+}
+
+
+br{
+clear: both;
+}
+
+#li2 a{
+font-family:"Constantine";
+font-size:20px;
+color:black;
+font-weight:bold;
+}
+
+#pre2{
+list-style-type:none; 
+font-family:"Constantine";
+clear:both;
+}
+
+td{
+font-size:30;
+color:white;
+padding:10px;
+}
+
+footer{
+clear:both;
+background-color:#DAA520;
+}
+</style>
+
+<body>
+
+<img id="img1" src="globetrotlogo.png" alt="Logo" width=300 height=150>
+<h1>GlobeTrot Tours
+</h1>
+<h4>"You have arrived."</h4>
+<ul id="ul1">
+  <li id="li1"><a class="active" href="#home">Home</a></li>
+  <li id="li1"><a href="dest.html">Destinations</a></li>
+  <li id="li1"><a href="#contactus">Contact Us</a></li>
+  <li id="li1"><a href="Login.html">Log In</a></li>	
+  
+  </li>
+</ul>
+<div class="container">
+<br>
+<h3>			           PAYMENT DETAILS</h3>
+<div id="div2">
+<form action="payment.php" onSubmit="return onSubmit()" name="payment" method="post">
+
+<table>
+<tr>
+ <td>Payment Mode:</td><td> <input type="radio" name="paymod" value="Credit" checked>Credit <input type="radio" name="paymod" value="Debit" selected>Debit</td></tr>
+<tr><td>Bank:</td><td><input type="radio" name="bank" value="AXIS">AXIS<br>
+		      <input type="radio" name="bank" value="ICICI">ICICI<br>
+	              <input type="radio" name="bank" value="SBI">HDFC<br>
+                      <input type="radio" name="bank" value="HDFC">SBI<br></td>	</tr>	
+<tr><td>Name on the Card:</td><td><input type="text" class="text4" name="cardname" required></td></tr>
+	
+<tr><td>Card number:</td><td><input type="number" class="text4" name="cno" id="cno" onchange="return checkCardNo()" required></td></tr>
+<tr><td>CVV:</td><td><input type="password" name="cvv" class="text4" id="cvv" onchange="return checkCVV()" required></td></tr>
+<tr><td>Expiry Date:</td><td><input type="text" class="text4" name="expdate" placeholder="mm/yyyy" required></td></tr>
+</table><br><br>
+<center><input type="submit" value="Submit Details" ></center>
+</form>
+</div>
+<footer>
+<h3 id="h31">POPULAR CHOICES</h3>
+
+<ul id="pre2">
+<pre>
+<li id="li2">                  			                            <a href="#">Agra</a>              	         <a href="#">Kashmir</a>             	    <a href="#">Leh/Ladakh</a></li><br>
+</pre>
+</ul>
+</footer>
+
+</div>
+<script>
+function checkCardNo()
+		{
+			var a=document.forms["payment"]["cno"].value;
+		  	if(a.length <16 || a.length>16)
+			{
+    				alert("Card Number should be 16 digit");
+				document.forms["payment"]["cno"].value="";
+				return false;
+			}
+		}
+function checkCVV()
+		{	var a=document.forms["payment"]["cvv"].value;
+		  	if(a.length <3 || a.length>3)
+			{
+    				alert("CVV should be 3 digit");
+				document.forms["payment"]["cvv"].value="";
+				return false;
+			}
+		}
+function onSubmit(){
+alert("You have paid successfully. Thankyou!");	
+document.signup.submit();
+}
+
+</script>
+</body>
+</html>
+
+
+

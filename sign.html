@@ -1,0 +1,217 @@
+<html>
+<style>
+.container { 
+  background: url(mountains.jpg) no-repeat center fixed; 
+opacity: 1;
+  background-size: cover;
+  position:relative;
+clear:both;
+}
+#img1{
+float:left;
+}
+
+h1{
+text-align:center;
+
+color:#782525;
+font-family:"Constantine";
+font-size: 50px;
+font-variant: small-caps;
+}
+td{
+color:white;
+font-size:30px;
+padding:10px;
+}
+.text4
+{
+border-radius: 10px;
+transition: 200ms all ease;
+
+padding: 5px 5px;
+
+}
+.text4:hover
+{
+margin:-5px 0 0 -5px;
+height:29px;
+width:250px;
+border-radius: 10px;
+}
+table{width:100%;}
+#ul1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    clear:both;  
+}
+
+#li1 {
+    float: left;
+}
+
+a{
+font-family: Constantine;
+}
+
+#li1 a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 60px;
+    text-decoration: none;
+    font-family: "Constantine";
+    font-variant: small-caps; 
+    font-size: 30px;
+}
+
+#li1 a:hover:not(.active) {
+    background-color: #DAA520;
+}
+
+.active {
+    background-color: #DAA520;
+}
+
+input[type=text] {
+       box-sizing: border-box;
+       border: 2px solid #ccc;
+       font-size: 16px;
+       background-color: white;
+ }
+
+input[placeholder="Search.."] {
+padding: 5px;
+}
+
+#div2{
+			border : 1px solid white;
+			margin : 100px 500px 100px 600px;
+			border-radius : 3px;
+			padding:20px;
+}
+input[type=submit]{
+    			width: 25%;
+    			padding: 14px 20px;
+    			margin: 8px 10px;
+    			cursor: pointer;
+    			color: black;
+			border-radius : 5px;
+}
+h3{
+text-align: center;
+color:#782525;
+font-variant: small-caps;
+font-size:25px;
+
+}
+h4{
+text-align:center;
+font-size:30;
+font-style:oblique;
+color:#782525;
+font-family:"Constantine";
+}
+
+footer{
+
+background-color:#DAA520;
+}
+#pre2{
+list-style-type:none; 
+font-family:"Constantine";
+clear:both;
+}
+#li2 a{
+font-family:"Constantine";
+font-size:20px;
+color:black;
+}
+
+
+</style>
+<body>
+
+<img id="img1" src="globetrotlogo.png" alt="Logo" width=300 height=150>
+<h1>GlobeTrot Tours
+</h1>
+<h4>"You have arrived"</h4>
+<div class=container>
+<ul id="ul1">
+  <li id="li1"><a href="GTB.html">Home</a></li>
+  <li id="li1"><a href="dest123.html">Destinations</a></li>
+  <li id="li1"><a href="contact1.html">Contact Us</a></li>
+  <li id="li1"><a href="Login.html">Log In</a></li>	
+  </li>
+</ul>
+
+
+<div id="div2">
+<form name="signup" action="register_insert.php" onSubmit="return onSubmit()" method="post">
+<table>
+<tr><td>Username:</td><td>                 <input type="text" class="text4" name="name" maxlength=10 required></td></tr>
+<tr><td>Password:</td><td>        <input type="password" class="text4"  name="pass" maxlength="10" onchange="return checkPassword1()" required></td></tr>
+<tr><td>Confirm Password:</td><td><input type="password" class="text4"  name="cpass" maxlength="10" onchange="return checkPassword2()" required></td></tr>
+<tr><td>Mobile No:</td><td>       <input type="number" class="text4"  name="pno" onchange="return checkNumber()" required></td></tr>
+<tr><td>Email Id: </td><td>       <input type="email" class="text4"  name="email" required></td></tr>
+</table>
+<br><br>
+<center><input type="submit" value="Sign Up" name="submit"></center>
+</form>
+<script>
+function checkPassword1(){
+var x = document.forms["signup"]["pass"].value;
+if(x.length<6){
+alert("Password should be minimum 6 digit");
+document.forms["signup"]["pass"].value="";
+}
+}
+
+function checkPassword2(){
+var x = document.forms["signup"]["pass"].value;
+var y = document.forms["signup"]["cpass"].value;
+if(x==y){
+alert("Password set");
+}
+else{
+alert("Please check password");
+document.forms["signup"]["cpass"].value="";
+}
+}
+
+function checkNumber(){
+var x=document.forms["signup"]["pno"].value;
+if(x.length!=10)
+{
+alert("Please check the number");
+document.forms["signup"]["pno"].value="";
+}
+}
+
+function onSubmit(){
+alert("A confirmatory email has been sent to your registered email id. Please check. Thankyou!");	
+document.signup.submit();
+}
+</script>
+</div>
+<br>
+<br>
+<br>
+</div>
+<footer>
+<h3 id="h31">POPULAR CHOICES</h3>
+
+<ul id="pre2">
+<pre>
+<li id="li2">                   						                           <a href="#">Agra</a>                       <a href="#">Kashmir</a>                  <a href="#">Leh/Ladakh</a></li><br>
+
+</pre>
+</ul>
+</footer>
+
+</div>
+</body>
+</html>

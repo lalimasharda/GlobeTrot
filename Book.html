@@ -1,0 +1,226 @@
+<html>
+<style>
+.container { 
+  background: url(mountains.jpg) no-repeat center fixed; 
+opacity: 1;
+  background-size: cover;
+  position:relative;
+clear:both;
+}
+#div2{
+			border : 1px solid white;
+			margin :30px 600px 100px 550px;
+			border-radius : 3px;
+			padding:20px;width:600px;
+			align:center;
+
+}
+input[type=submit]{
+    			width: 25%;
+    			padding: 14px 20px;
+    			margin: 8px 10px;
+    			cursor: pointer;
+    			color: black;
+			border-radius : 5px;
+			align:center;
+}
+td{
+color:white;
+font-size:30px;
+padding:10px;
+}
+table{width: 100%;}
+
+.text4
+{
+border-radius: 10px;
+transition: 200ms all ease;
+
+padding: 5px 5px;
+
+}
+.text4:hover
+{
+margin:-5px 0 0 -5px;
+height:29px;
+width:250px;
+border-radius: 10px;
+}
+
+#img1{
+float:left;
+}
+
+h1{
+text-align:center;
+color:#782525;
+font-family:"Constantine";
+font-size: 50px;
+font-variant: small-caps;
+}
+
+h4{
+text-align:center;
+font-size:30;
+font-style:oblique;
+color:#782525;
+font-family:"Constantine";
+}
+
+#ul1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    clear:both;  
+}
+
+#li1 {
+    float: left;
+}
+
+a{
+font-family: Constantine;
+}
+
+#li1 a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 60px;
+    text-decoration: none;
+    font-family: "Constantine";
+    font-variant: small-caps; 
+    font-size: 30px;
+}
+
+#li1 a:hover:not(.active) {
+    background-color: #DAA520;
+}
+
+.active {
+    background-color: #DAA520;
+}
+
+input[type=text] {
+       box-sizing: border-box;
+       border: 2px solid #ccc;
+       font-size: 16px;
+       background-color: white;
+ }
+
+input[placeholder="Search.."] {
+padding: 5px;
+}
+
+h3{
+text-align: center;
+color:white;
+font-variant: small-caps;
+font-size:30px;
+
+}
+
+#img3{
+float: right;
+clear:both;
+}
+
+#pre1{
+font-family:"Constantine";
+font-size:20px;
+
+}
+#p2{
+font-family:"Constantine";
+font-size:20px;
+text-align: right;
+}
+
+
+#img4{
+float:left;
+clear:both;
+}
+
+
+br{
+clear: both;
+}
+
+#li2 a{
+font-family:"Constantine";
+font-size:20px;
+color:black;
+font-weight:bold;
+}
+
+#pre2{
+list-style-type:none; 
+font-family:"Constantine";
+clear:both;
+}
+
+footer{
+clear:both;
+background-color:#DAA520;
+}
+</style>
+
+<body>
+
+<img id="img1" src="globetrotlogo.png" alt="Logo" width=300 height=150>
+<h1>GlobeTrot Tours
+</h1>
+<h4>"You have arrived."</h4>
+<div class="container">
+<ul id="ul1">
+  <li id="li1"><a href="GTB.html">Home</a></li>
+  <li id="li1"><a class="active" href="dest123.html">Destinations</a></li>
+  <li id="li1"><a href="contact1.html">Contact Us</a></li>
+  <li id="li1"><a href="logout.php">Log Out</a></li>	
+  </li>
+</ul>
+
+<h3>			           BOOKING DETAILS</h3>
+<div id="div2">
+<form action="booking.php" onSubmit="return onSubmit()" method="post">
+<table>
+  <tr><td>Enter Name:</td> <td><input type="text" class="text4" name="name" maxlength="20" required></td></tr>
+ <tr><td> Enter Mobile No. : </td> <td><input type="number" class="text4" name="mobile" maxlength="10" required></td></tr>
+<tr><td>  Enter Email:</td> <td> <input type="email" class="text4" name="email"   required></td></tr>
+<tr><td>  Enter Destination:</td> <td> <input type="text" class="text4" name="dest" maxlength="20" required></td></tr>
+<tr><td>  Number of Tickets:</td> <td> <input type="number" class="text4" name="ticket" maxlength="2" required></td></tr>
+ <tr><td> Age: </td> <td><input type="number" class="text4" name="age" maxlength="2" required></td></tr>
+<tr><td>  Choose Package:</td> <td> <input type="radio" name="package" value="Standard" checked>Standard <input type="radio" name="package" value="Delux">Delux</td></tr>
+<tr><td>  Date of Travel: </td> <td><input type="date" name="date"></td></tr>
+</table><br><br>
+<center> <input type="submit" value="Submit"></center>
+<script>
+function onSubmit(){
+alert("A confirmatory email has been sent to your registered Email Id. Please check. Thankyou!");	
+document.signup.submit();
+}
+</script>
+
+</form>
+</div>
+<footer>
+<h3>POPULAR CHOICES</h3>
+
+<ul id="pre2">
+<pre>
+<li id="li2">                             			                 <a href="#">Agra</a>                       <a href="#">Kashmir</a>              <a href="#">Leh/Ladakh</a></li><br>
+
+</pre>
+</ul>
+</footer>
+
+</div>
+
+</body>
+</html>
+
+
+
