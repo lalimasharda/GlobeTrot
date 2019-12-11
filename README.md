@@ -4,6 +4,3 @@ GlobeTrot is an online tours and travel website that allows users to register, b
 
 Commit1
 
-Commit2
-
-Commit3
